@@ -24,8 +24,8 @@ How to start
 1. Clone this project: `git clone https://github.com/konantian/PexelsSpider.git`
 2. Enter the project: `cd PexelsSpider`
 3. Start the program without tag: `python3.6 home.py`
-  * Enter the first page
-  * Enter the last page
+> * Enter the first page
+> * Enter the last page
 4.  Start the program with tag:  `python3.6 search.py`
   * Enter the tag
 
