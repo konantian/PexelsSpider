@@ -30,3 +30,4 @@ How to start
 This program is for you to download the beautiful wallpapers from www.pexels.com by just type the first page and the last page. After the program finish, it will create a folder called "Wallpapers" inside the current working path.
 
 ## Wallpapers screenshot
+![alt text](https://github.com/konantian/PexelsSpider/blob/master/screenshot.png)
