@@ -7,14 +7,15 @@ from urllib.request import*
 from fake_useragent import UserAgent
 from multiprocessing.dummy import Pool as ThreadPool
 import re
+import os
 
 class Scrapper:
 
-	def __init__(self):
+	def __init__(self,path):
 
 		self.agent = UserAgent()
 		self.headers = {"User-Agent":self.agent.random}
-		self.path = r'/Users/wangyuan/Wallpaper/'
+		self.path = path
 		self.pattern = re.compile(r'(?<=\").+?(?=\?)', re.S)
 
 	def readHtml(self,url):
@@ -45,6 +46,9 @@ if __name__ == "__main__":
 		url="https://www.pexels.com/?format=js&page={page}".format(page=i)
 		urls.append(url)
 
-	scrapper = Scrapper()
+	path = r"./Wallpapers/"
+	if not os.path.exists(path):
+		os.makedirs(path)
+	scrapper = Scrapper(path)
 	pool = ThreadPool(20)
 	pool.map(scrapper.readHtml,urls)
