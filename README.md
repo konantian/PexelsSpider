@@ -2,7 +2,7 @@
 A spider for downloading wallpapers from pexels.com
 
 ## Reinforcement learning Second edition Chapter8 Example 8.1 implementation
-[start.py](https://github.com/konantian/PexelsSpider/blob/master/start.py.py) This file is for start the spider<br />
+[start.py](https://github.com/konantian/PexelsSpider/blob/master/start.py) This file is for start the spider<br />
 
 Before start
 ------------
