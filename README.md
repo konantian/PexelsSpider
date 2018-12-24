@@ -32,4 +32,6 @@ How to start
 This program is for you to download the beautiful wallpapers from www.pexels.com by just type the number of pictures you want to download. If you want wallpapers under specific tags, you can instead by typing the tag only.After the program finish, it will create a folder called "Wallpapers" inside the current working path or it just called your tag.
 
 ## Wallpapers screenshot
-![alt text](https://github.com/konantian/PexelsSpider/blob/master/screenshot.png)
+![alt text](https://github.com/konantian/PexelsSpider/blob/master/Files/screenshot1.png)
+![alt text](https://github.com/konantian/PexelsSpider/blob/master/Files/screenshot2.png)
+![alt text](https://github.com/konantian/PexelsSpider/blob/master/Files/screenshot3.png)
