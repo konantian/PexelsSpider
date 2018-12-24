@@ -3,9 +3,6 @@ from bs4 import BeautifulSoup
 from urllib.request import *
 from fake_useragent import UserAgent
 import re
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 class Scrapper:
 
@@ -49,9 +46,9 @@ class Scrapper:
 	def downLoad(self,img):
 		number = self.namePattern.findall(img)[0]
 		name = number + ".jpeg"
-
+		cafile = './Files/cacert.pem'
 		try:
-			req = requests.get(img,headers = self.headers)
+			req = requests.get(img,headers = self.headers,verify=cafile)
 			pic = req.content
 			with open(self.path+name,'wb') as f:
 				f.write(pic)
