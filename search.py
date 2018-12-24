@@ -3,6 +3,7 @@
 
 from Scrapper import Scrapper
 import os
+from multiprocessing.dummy import Pool as ThreadPool
 
 if __name__ == "__main__":
 
@@ -11,5 +12,8 @@ if __name__ == "__main__":
 	if not os.path.exists(path):
 		os.makedirs(path)
 	scrapper = Scrapper(path)
-	url="https://www.pexels.com/search/{tag}/?format=js".format(tag=tag)
-	scrapper.readHtml(url)
+	url = "https://www.pexels.com/search/{tag}/?format=js".format(tag=tag)
+	imgLinks = scrapper.readhtml(url)
+	pool = ThreadPool(20)
+	pool.map(scrapper.downLoad,imgLinks)
+
